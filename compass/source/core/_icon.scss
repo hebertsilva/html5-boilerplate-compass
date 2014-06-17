@@ -1,0 +1,21 @@
+/*
+*   Import image to genereta sprite icons
+*/
+
+@import "icon/*.png";
+@include all-icon-sprites;
+
+
+@mixin iconsize($iconname) {
+    width: icon-sprite-width($iconname);
+    height: icon-sprite-height($iconname);
+}
+
+@mixin iconsize-hover($iconname) {
+    width: icon-sprite-width($iconname);
+    height: icon-sprite-height($iconname);
+
+    &:hover {
+        @include icon-sprite($iconname+"-actv");
+    }
+}

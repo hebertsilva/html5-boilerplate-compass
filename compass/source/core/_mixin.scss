@@ -1,0 +1,19 @@
+/*
+* 	Mixin cacl in 'em'
+*/
+
+@function calc-em($target-px, $context) {
+	@return ($target-px / $context) * 1em;
+}
+
+/*
+* 	Background cover for IE
+*/
+
+@mixin ie-background-cover($image) {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+		src="#{image_url($image, true, false)}",
+		sizingMethod="scale"
+	);
+}

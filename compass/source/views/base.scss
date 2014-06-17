@@ -1,0 +1,20 @@
+/*
+*	HTML5 Boilerplate using Compass/SASS
+*	Author: Hebert SIlva
+*	Contact: hebertsilva.com
+*/
+
+@import "core/base";
+
+/*
+*	CSS BASE
+*/
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-size: 12px;
+}

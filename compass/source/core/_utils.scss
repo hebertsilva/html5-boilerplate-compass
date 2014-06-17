@@ -1,0 +1,13 @@
+/*
+*	Utils site
+*/
+
+.clearfix {
+    @include legacy-pie-clearfix;   
+}
+
+.ir {
+    @include hide-text("left");
+}
+
+$max-width: 1000px;
