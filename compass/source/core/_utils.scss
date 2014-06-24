@@ -2,6 +2,9 @@
 *	Utils site
 */
 
+@import "compass/utilities/general/clearfix";
+@import "compass/typography/text/replacement";
+
 .clearfix {
     @include legacy-pie-clearfix;   
 }
@@ -10,4 +13,7 @@
     @include hide-text("left");
 }
 
-$max-width: 1000px;
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
