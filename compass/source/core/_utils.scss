@@ -2,9 +2,6 @@
 *	Utils site
 */
 
-@import "compass/utilities/general/clearfix";
-@import "compass/typography/text/replacement";
-
 .clearfix {
     @include legacy-pie-clearfix;   
 }
