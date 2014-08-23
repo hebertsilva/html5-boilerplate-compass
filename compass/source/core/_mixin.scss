@@ -22,3 +22,11 @@
     #{$property}: -webkit-calc(#{$expression});
     #{$property}: calc(#{$expression});
 }
+
+/*
+* 	Mixins Fonts
+*/
+
+@mixin font-01 {
+	font-family: 'Open Sans', sans-serif;
+}
