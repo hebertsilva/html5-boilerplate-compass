@@ -1,5 +1,8 @@
-@import "compass/reset";
+/*
+*	Import's generates css
+*/
 
-// Compass
+@import "compass";
+@import "compass/reset";
 @import "core/fonts";
 @import "core/utils";

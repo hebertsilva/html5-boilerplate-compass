@@ -5,7 +5,7 @@ sass_dir = "source"
 images_dir = static_dir + "image/"
 javascripts_dir = static_dir + "js/"
 fonts_dir = static_dir + "font/"
-generated_images_dir = images_dir + "common/"
+generated_images_dir = images_dir
 
 output_style = :compressed
 relative_assets = true

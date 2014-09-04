@@ -1,15 +1,22 @@
 
 /*
-*	Variables for project
+*	Variables for config project
 */
 
-$bg-default: #F7F5F2;
+/*
+*	Container project
+*/
 
-// Fonts Size
+$wrapper-default: 960px;
+
+/*
+*	Font Size 
+*/
+
 $fz-default: 12px;
-
-// Container
-$w-default: 960px;
-
-// Fonts Size
-$fz-14: 14px;
+$fz-small: 14px;
+$fz-extra-small: 16px;
+$fz-medium: 18px;
+$fz-extra-medium: 20px;
+$fz-large: 22px;
+$fz-extra-large: 24px;

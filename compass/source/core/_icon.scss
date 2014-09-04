@@ -3,19 +3,11 @@
 */
 
 @import "icon/*.png";
+
 @include all-icon-sprites;
 
-
-@mixin iconsize($iconname) {
+@mixin icon($iconname) {
+	@include icon-sprite($iconname);
     width: icon-sprite-width($iconname);
     height: icon-sprite-height($iconname);
-}
-
-@mixin iconsize-hover($iconname) {
-    width: icon-sprite-width($iconname);
-    height: icon-sprite-height($iconname);
-
-    &:hover {
-        @include icon-sprite($iconname+"-actv");
-    }
 }
