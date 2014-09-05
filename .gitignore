@@ -37,3 +37,10 @@ r
 .sass-cache
 *.sass-cache
 static/css
+
+# node / grunt
+node_modules
+
+# bundler
+.bundle
+Gemfile.lock
