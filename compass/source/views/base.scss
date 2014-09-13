@@ -9,6 +9,9 @@
 *	CSS BASE
 */
 
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
 body {
+	@include font-01;
 	font-size: $fz-default;
 }

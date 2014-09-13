@@ -9,8 +9,3 @@
 .ir {
     @include hide-text("left");
 }
-
-* {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
