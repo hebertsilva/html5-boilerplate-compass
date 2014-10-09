@@ -1,13 +1,15 @@
+
 /*
 *   Import image to genereta sprite icons
 */
 
-@import "icon/*.png";
+%sprt {
+    @include inline-block;
+    background-image: $site-sprites;
+    background-repeat: no-repeat;
 
-@include all-icon-sprites;
-
-@mixin icon($iconname) {
-	@include icon-sprite($iconname);
-    width: icon-sprite-width($iconname);
-    height: icon-sprite-height($iconname);
+    @include retina {
+        background-image: $site-sprites-2x;
+        @include background-size(ceil(image-width(sprite-path($site-sprites-2x)) / 2) auto);
+    }
 }

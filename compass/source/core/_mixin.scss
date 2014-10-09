@@ -30,3 +30,44 @@
 @mixin font-01 {
 	font-family: 'Open Sans', sans-serif;
 }
+
+/*
+* 	Mixins Devices
+*/
+
+@mixin retina() {
+    @if $use-retina-sprites == true {
+        @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+            @content;
+        }
+    }
+}
+
+/*
+* 	Mixins Icon's
+*/
+
+@function sprt-width($sprite, $map:$site-sprites) {
+    @return image-width(sprite-file($map, $sprite));
+}
+
+@function sprt-height($sprite, $map:$site-sprites) {
+    @return image-height(sprite-file($map, $sprite));
+}
+
+@mixin sprt-position($sprite, $map:$site-sprites) {
+    width: sprt-width($sprite);
+    height: sprt-height($sprite);
+    background-position: sprite-position($map, $sprite);
+
+    @include retina{
+        background-position: round(nth(sprite-position($site-sprites-2x, $sprite), 1) / 2) round(nth(sprite-position($site-sprites-2x, $sprite), 2) / 2);
+        height: image-height(sprite-file($site-sprites-2x, $sprite)) / 2;
+        width: image-width(sprite-file($site-sprites-2x, $sprite)) / 2;
+    }
+}
+
+@mixin sprt($sprite) {
+    @extend %sprt;
+    @include sprt-position($sprite);
+}

@@ -1,6 +1,3 @@
-App = window.App || {};
-
-App.objects = {};
 
 App.objects.BaseView = function() {
 	this.win = $(window);

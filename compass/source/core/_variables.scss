@@ -20,3 +20,12 @@ $fz-medium: 18px;
 $fz-extra-medium: 20px;
 $fz-large: 22px;
 $fz-extra-large: 24px;
+
+
+/*
+* 	Sprites setup 
+*/
+
+$use-retina-sprites: false;
+$site-sprites-prefix: 's';
+$site-sprites: sprite-map("icon/*.png", $spacing: 15px);
