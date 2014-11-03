@@ -1,4 +1,4 @@
-# HTML5 Boilerplate whit Compass
+# HTML5 Boilerplate with Compass
 
 * Repositório - https://github.com/hebertsilva/html5-boilerplate-compass
 
