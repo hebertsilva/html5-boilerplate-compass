@@ -60,7 +60,7 @@
     height: sprt-height($sprite);
     background-position: sprite-position($map, $sprite);
 
-    @include retina{
+    @include retina {
         background-position: round(nth(sprite-position($site-sprites-2x, $sprite), 1) / 2) round(nth(sprite-position($site-sprites-2x, $sprite), 2) / 2);
         height: image-height(sprite-file($site-sprites-2x, $sprite)) / 2;
         width: image-width(sprite-file($site-sprites-2x, $sprite)) / 2;

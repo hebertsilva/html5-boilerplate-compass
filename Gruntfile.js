@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
+    // Project configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -10,6 +10,10 @@ module.exports = function(grunt) {
             jsPath: '<%= options.staticPath %>js/',
             cssPath: '<%= options.staticPath %>css/',
             imgPath: '<%= options.staticPath %>image/',
+        },
+
+        jshint: {
+            all: ['Gruntfile.js', '<%= options.jsPath %>app/**/*.js']
         },
 
         shell: {
@@ -71,6 +75,16 @@ module.exports = function(grunt) {
         },
 
         watch: {
+            livereload: {
+                files: [
+                    '<%= options.cssPath %>**/*.css',
+                    '<%= options.jsPath %>**/*.js'
+                ],
+                options: {
+                    livereload: true
+                }
+            },
+
             js: {
                 files: ['<%= jshint.all %>'],
                 tasks: ['jshint']
@@ -100,7 +114,7 @@ module.exports = function(grunt) {
     // load tasks
     require('load-grunt-tasks')(grunt);
 
-    // Default task(s).
+    // Default task(s)
     grunt.registerTask('imagemin', ['imagemin']);
     grunt.registerTask('bundler', ['shell:bundler']);
     grunt.registerTask('css', ['shell:compassCompile']);
