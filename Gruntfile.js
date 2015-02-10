@@ -74,6 +74,17 @@ module.exports = function(grunt) {
             }
         },
 
+        uglify: {
+            my_target: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= options.jsPath %>app/',
+                    src: '**/*.js',
+                    dest: '<%= options.staticPath %>minified/'
+                }]
+            }
+        },
+
         watch: {
             livereload: {
                 files: [
@@ -115,7 +126,8 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     // Default task(s)
-    grunt.registerTask('imagemin', ['imagemin']);
+    grunt.registerTask('optimizeimg', ['imagemin']);
+    grunt.registerTask('minified', ['uglify']);
     grunt.registerTask('bundler', ['shell:bundler']);
     grunt.registerTask('css', ['shell:compassCompile']);
     grunt.registerTask('cleancss', ['shell:compassClean']);
