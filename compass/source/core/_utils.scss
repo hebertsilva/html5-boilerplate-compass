@@ -1,5 +1,10 @@
+
 /*
-*	Utils site
+	## Styles utils
+*/
+
+/*
+	## Container
 */
 
 .clearfix {
@@ -8,4 +13,20 @@
 
 .ir {
     @include hide-text("left");
+}
+
+.db {
+	display: block;
+}
+
+.ib {
+	@include inline-block;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
 }

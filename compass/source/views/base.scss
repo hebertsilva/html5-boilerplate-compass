@@ -1,17 +1,10 @@
 /*
-*	Default styles
-*	Default generic
+	## Global style
 */
 
 @import "core/base";
 
-/*
-*	CSS BASE
-*/
-
-* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-
 body {
-	@include font-01;
+	@include font($font-default, 400);
 	font-size: $fz-default;
 }

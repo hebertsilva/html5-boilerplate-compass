@@ -1,9 +1,9 @@
 /*
-*	Import's generates css
+	## Basic styles
 */
 
 @import "compass";
-@import "compass/reset";
+@import "core/reset";
 @import "core/variables";
 @import "core/colors";
 @import "core/mixin";

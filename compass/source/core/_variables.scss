@@ -1,16 +1,38 @@
 
 /*
-*	Variables for config project
+	## Variables for config project
 */
 
 /*
-*	Container project
+	## Layout
 */
 
 $container: 960px;
+$break-point-large: 840px;
+$break-point-medium: 768px;
+$break-point-small: 640px;
+
+
 
 /*
-*	Font Size 
+	## Sprites setup
+*/
+
+$use-retina-sprites: false;
+$site-sprites-prefix: 's';
+$site-sprites: sprite-map("icon/*.png", $spacing: 15px);
+
+/*
+	## Fonts
+*/
+
+$font-1:                                "open-sans";
+$font-default:                          $font-1;
+$bold-default:                          700;
+$font-size-base:                        12px;
+
+/*
+	## Font Size
 */
 
 $fz-default: 12px;
@@ -20,12 +42,3 @@ $fz-medium: 18px;
 $fz-extra-medium: 20px;
 $fz-large: 22px;
 $fz-extra-large: 24px;
-
-
-/*
-* 	Sprites setup 
-*/
-
-$use-retina-sprites: false;
-$site-sprites-prefix: 's';
-$site-sprites: sprite-map("icon/*.png", $spacing: 15px);

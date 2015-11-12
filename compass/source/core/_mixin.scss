@@ -1,5 +1,11 @@
+
 /*
-* 	Mixin cacl in 'em'
+    ## Global functions
+*/
+
+
+/*
+    ## Calc in 'em'
 */
 
 @function calc-em($target-px, $context) {
@@ -7,7 +13,7 @@
 }
 
 /*
-* 	Background cover for IE
+    ## Background cover for IE
 */
 
 @mixin ie-background-cover($image) {
@@ -18,21 +24,25 @@
 	);
 }
 
-@mixin calc($property, $expression) {
-    #{$property}: -webkit-calc(#{$expression});
-    #{$property}: calc(#{$expression});
-}
-
 /*
-* 	Mixins Fonts
+    ## Generate font
 */
 
-@mixin font-01 {
-	font-family: 'Open Sans', sans-serif;
+@mixin font($font-name, $font-weight) {
+    @extend %#{$font-name}-#{$font-weight};
+}
+
+@mixin make-font($font-name, $font-family-name, $font-weight, $add-weight:true) {
+    %#{$font-name}-#{$font-weight} {
+        font-family: $font-family-name;
+        @if $add-weight == true {
+            font-weight: $font-weight;
+        }
+    }
 }
 
 /*
-* 	Mixins Devices
+    ## Mixins Devices
 */
 
 @mixin retina() {
@@ -44,7 +54,7 @@
 }
 
 /*
-* 	Mixins Icon's
+    ## Mixins srpites
 */
 
 @function sprt-width($sprite, $map:$site-sprites) {
