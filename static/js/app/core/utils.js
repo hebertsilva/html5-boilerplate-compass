@@ -1,8 +1,13 @@
 /*
-*	- JS Utils for project
-*	- Default JS Config
+	## Utils js 
 */
 
-App = window.App || {};
-
-App.objects = {};
+var Utils =  {
+	ajaxForm: function( form ) {
+		return $.ajax({
+			type: form.attr('method'),
+			url: form.attr('action'),
+			data: form.serialize()
+		});
+	}
+};
