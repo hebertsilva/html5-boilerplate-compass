@@ -1,15 +1,15 @@
+
 /*
-	## Base js 
+	## Base js
 */
 
 var Base = function() {
-
 	this.initEvents();
 };
 
 Base.prototype = {
 	initEvents: function() {
-
+		
 	}
 };
 
