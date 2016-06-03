@@ -80,3 +80,39 @@
     @extend %sprt;
     @include sprt-position($sprite);
 }
+
+/*
+    ## Media queries
+*/
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == "container" {
+        @media (max-width: $container) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == "large" {
+        @media (max-width: $break-point-large) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint == "medium" {
+        @media (max-width: $break-point-medium) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == "extra-medium" {
+        @media (max-width: $break-point-extra-medium) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == "small" {
+        @media (max-width: $break-point-small) {
+            @content;
+        }
+    }
+}
