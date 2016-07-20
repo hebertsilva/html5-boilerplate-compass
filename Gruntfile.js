@@ -102,7 +102,7 @@ module.exports = function(grunt) {
             },
 
             sprites: {
-                files: ['<%= options.staticPath %>img/icon/*.png'],
+                files: ['<%= options.staticPath %>image/icon/*.png'],
                 tasks: ['shell:compassCompile']
             }
         },

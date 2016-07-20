@@ -116,3 +116,49 @@
         }
     }
 }
+
+/*  
+    ## Forms
+*/
+
+@mixin form-input-placeholder() {
+    input[type="text"].placeholder,
+    input[type="password"].placeholder,
+    input[type="email"].placeholder,
+    textarea.placeholder,
+    .placeholder{
+        @content;
+    }
+
+    ::-webkit-input-placeholder {
+        @content;
+    }
+
+    ::-moz-placeholder  {
+        @content;
+    }
+
+    :-ms-input-placeholder  {
+        @content;
+    }
+
+    input:-moz-placeholder  {
+        @content;
+    }
+
+    textarea:-moz-placeholder  {
+        @content;
+    }
+}
+
+@mixin form-input-placeholder-focus() {
+    input:focus::-webkit-input-placeholder { @content; }
+    input:focus::-moz-placeholder { @content; }
+    input:focus:-ms-input-placeholder { @content; }
+    input:focus:-moz-placeholder { @content; }
+    textarea:focus::-webkit-input-placeholder { @content; }
+    textarea:focus::-moz-placeholder { @content; }
+    textarea:focus:-ms-input-placeholder { @content; }
+    textarea:focus:-moz-placeholder { @content; }
+    .placeholder:focus{ @content; }
+}
